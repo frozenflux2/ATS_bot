@@ -1,0 +1,37 @@
+Summary
+We are currently looking for a Fullstack Developer for client in the logistics industry
+
+Overview
+Job description:
+design, develop and maintain web applications using Javascript, Python and PostgreSQL
+
+collaborate with cross-functional teams to design and implement new features
+
+write clean, efficient, and well-documented code
+
+troubleshoot and debug application issues
+
+moEnsure the best possible performance, quality and responsiveness of the applications
+
+identify and correct bottlenecks and fix bugs
+
+help maintain code quality and organization
+
+​
+
+Requirements:
+strong knowledge and experience in Javascript, Python and PostgreSQL
+
+experience with front-end technologies such as HTML, CSS, and Javascript frameworks such as React or jQuery
+
+experience with back-end frameworks such as Flask or Django
+
+experience with database management and optimization
+
+strong understanding of web development concepts and best practices
+
+familiarity with Git version control
+
+strong problem-solving and analytical skills
+
+ability to work independently and in a team environment
