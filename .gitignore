@@ -2,3 +2,4 @@ backend/venv/
 frontend/.env
 backend/.env
 backend/__pycache__/
+backend/job_description.txt

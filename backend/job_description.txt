@@ -1,37 +1,13 @@
 Summary
-We are currently looking for a Fullstack Developer for client in the logistics industry
+Develop a betting solutions for e-sport
 
 Overview
-Job description:
-design, develop and maintain web applications using Javascript, Python and PostgreSQL
-
-collaborate with cross-functional teams to design and implement new features
-
-write clean, efficient, and well-documented code
-
-troubleshoot and debug application issues
-
-moEnsure the best possible performance, quality and responsiveness of the applications
-
-identify and correct bottlenecks and fix bugs
-
-help maintain code quality and organization
+We work with purely esports titles such as Dota2, LoL, CS:GO, as well as esports analogues of traditional sports like FIFA (soccer), NBA2K (basketball), and more. Based on the data we have available, we create and continuously improve mathematical models that help us predict match odds. With a team of 150+ people, based in the Czech Republic and many other locations across Europe and Asia, we are growing at a fast pace and is looking for an experienced developer.
 
 ​
 
-Requirements:
-strong knowledge and experience in Javascript, Python and PostgreSQL
-
-experience with front-end technologies such as HTML, CSS, and Javascript frameworks such as React or jQuery
-
-experience with back-end frameworks such as Flask or Django
-
-experience with database management and optimization
-
-strong understanding of web development concepts and best practices
-
-familiarity with Git version control
-
-strong problem-solving and analytical skills
-
-ability to work independently and in a team environment
+Develop and design an architecture of a microservices platform that handles tens of thousands of requests per minute.
+Operate the cloud platform on AWS.
+As a senior developer, solve complex problems related to multi-threaded apps, high-volume traffic, or high availability.
+As a generalist, be part of collaborative, autonomous product teams, deliver end-to-end functionality and foster ownership, innovation, and high-quality products in a fast-paced startup environment with no strict processes.
+Share knowledge and support other team members (e.g., through code reviews) while working onsite from the Prague office or completely remotely within the European time zone.
