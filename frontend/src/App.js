@@ -4,6 +4,7 @@ function App() {
   const [jobDescription, setJobDescription] = useState('');
   const [jobTitle, setJobTitle] = useState('');
   const [skills, setSkills] = useState('');
+  const [locations, setLocations] = useState('');
   const [levels, setLevels] = useState('');
   const [specialities, setSpecialities] = useState('');
   const [languages, setLanguages] = useState('');
@@ -15,7 +16,7 @@ function App() {
   const handleSubmit = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch(`${apiEndpoint}/extract`, {
+      const response = await fetch(`${apiEndpoint}/api/v1/ats/extract`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,18 +26,20 @@ function App() {
 
       if (response.ok) {
         const data = await response.json();
-        setJobTitle(data.job_titles.join(', '));
-        // setSkills(data.skillsets.join(', '));
-        setLevels(data.levels.join(', '));
-        setSpecialities(data.specialties.join(', '));
+        setJobTitle(data.titles.join(', '));
+        setSkills(data.skillsets.join(', '));
+        setLocations(data.locations.join(', '));
+        setSpecialities(data.specialities);
+        setLevels(data.levels);
         setLanguages(data.languages.join(', '));
         setBenefits(data.benefits.join(', '));
       } else {
         console.error('Failed to fetch job title');
         setJobTitle('Error fetching job title');
         setSkills('');
-        setLevels('');
+        setLocations('');
         setSpecialities('');
+        setLevels('');
         setLanguages('');
         setBenefits('');
       }
@@ -44,8 +47,9 @@ function App() {
       console.error('Error:', error);
       setJobTitle('Error fetching job title');
       setSkills('');
-      setLevels('');
+      setLocations('');
       setSpecialities('');
+      setLevels('');
       setLanguages('');
       setBenefits('');
     } finally {
@@ -71,32 +75,41 @@ function App() {
         <textarea
           value={jobTitle}
           readOnly
-          rows={1}
+          rows={3}
           style={{ width: '100%' }}
         />
       </div>
-      {/* <div style={{ marginTop: '20px' }}>
+      <div style={{ marginTop: '20px' }}>
         <h3>Required Skills:</h3>
         <textarea
           value={skills}
           readOnly
-          rows={1}
+          rows={3}
           style={{ width: '100%' }}
         />
-      </div> */}
+      </div>
       <div style={{ marginTop: '20px' }}>
-        <h3>Required Levels:</h3>
+        <h3>Availabe Locations:</h3>
         <textarea
-          value={levels}
+          value={locations}
+          readOnly
+          rows={3}
+          style={{ width: '100%' }}
+        />
+      </div>
+      <div style={{ marginTop: '20px' }}>
+        <h3>Speciality:</h3>
+        <textarea
+          value={specialities}
           readOnly
           rows={1}
           style={{ width: '100%' }}
         />
       </div>
       <div style={{ marginTop: '20px' }}>
-        <h3>Required Specialities:</h3>
+        <h3>Required Level:</h3>
         <textarea
-          value={specialities}
+          value={levels}
           readOnly
           rows={1}
           style={{ width: '100%' }}
@@ -107,16 +120,16 @@ function App() {
         <textarea
           value={languages}
           readOnly
-          rows={1}
+          rows={3}
           style={{ width: '100%' }}
         />
       </div>
       <div style={{ marginTop: '20px' }}>
-        <h3>Required Benefits:</h3>
+        <h3>Available Benefits:</h3>
         <textarea
           value={benefits}
           readOnly
-          rows={1}
+          rows={3}
           style={{ width: '100%' }}
         />
       </div>

@@ -111,7 +111,7 @@ def get_best_location(description, locations):
                "type": "function",
                "function": {
                     "name": "extract_information_from_job_description",
-                    "description": "Identify the available locations where the future employee will work from the Job Description. Choose only from the provided lists. Call this function every time for the Job Description.",
+                    "description": "Identify the available locations where the future employee will work from the Job Description. Choose only from the provided lists. When you return locations only use original names from the list. When you can not find matched location from provided list, just ignore it and don't return that location. So the key here is you only can return locations from provided list. If you can not find matched location from the list, just return 'None'. If you find location from job description but can not find matching location in the list, just ignore it.",
                     "parameters": {
                          "type": "object",
                          "properties": {
@@ -171,10 +171,11 @@ if __name__ == "__main__":
      benefits = [benefit["nameEN"] for benefit in get_information_from_api(BENEFITS_ENDPOINT)]
      description = open("job_description.txt", "r").read()
 
-     result = get_best_titles(description, titles)
-     result2 = get_best_matching(description, specialties, levels, languages, benefits)
-     # result3 = get_best_location(description, locations)
+     # result = get_best_titles(description, titles)
+     # result2 = get_best_matching(description, specialties, levels, languages, benefits)
+     result3 = get_best_location(description, locations + ['None'])
      
-     print(result)
-     print(result2)
+     # print(result)
+     # print(result2)
+     print(result3)
      
